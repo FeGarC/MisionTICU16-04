@@ -1,0 +1,38 @@
+#Configurar el workspace
+1. Grabar el workspace --- Archivo --> Guardar espacio de trabajo 
+1.1 Piñon --->Configuraciones ---> workspace--->Workbench --> Apariencias ---> color de tema
+
+#Creacion del Package.Json
+npm init
+
+#Instalación de librerías
+npm i cors #Para bloquear o permitir que accedan al Bckend en java es cross origin
+npm i morgan #Logger permite ver los log 
+npm i express
+npm i mongoose #Conexion a mongo 
+npm i bcryptjs          #para encriptar información
+npm i jsonwebtoken #Seguridad
+
+#Mientras desarrollamos
+npm i dotenv --save-dev #para manejar archivos de conf planos en tu planos
+npm i nodemon --save-dev #compila los errores
+
+#Types
+npm i @types/cors --save-dev
+npm i @types/morgan --save-dev
+npm i @types/express --save-dev
+npm i @types/jsonwebtoken --save-dev
+
+
+#Incluimos typescript
+tsc --init
+
+#Configurar el tsconfig.json -->"outDir": "./build",
+
+#Creacion scripts en el package.json
+"dev": "nodemon build/index.js",
+"build": "tsc -w"
+
+#Vamos a crear las carpetas
+
+

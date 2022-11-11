@@ -1,0 +1,24 @@
+1. Generar carpeta build
+2. Detener terminales 
+3. Copiar package.json y variables.env 
+4. Modificar el package
+    4.1 eliminar scripts
+    4.2 cambiar "build" ---> "start"="node index.js"
+    4.3 archivo "dotenv" pasarlo de devDependencies a dependencies(producción)
+5. Abrir terminal cmd(preferiblemente la de windows) dentro de la carpeta build del backend
+6. en terminal ejecutar ---> heroku logout (para salir)
+                        --> heroku login (para entrar) --- > y
+                        --> Se abre página --> click en login (te saldrá un mensaje de que ya loggeaste)
+    volver a terminal --> debe aparecer el correo loggeado 
+                     -->git init (inicio repositorio)
+                     -->heroku git:remote -a <nombredelproyectoenkeroku> (sin diamantitos)
+                     -->git add . (añadir toda la carpeta)
+                     -->git commit -am "Textodelcommit" (Con las comillas)
+                     -->git push heroku master (Subir a heroku)
+                    ---> heroku logs para verificar estado del despliegue
+                    en caso de error 
+                     ---> git push heroku HEAD:master (enviarlo a otra rama en heroku)
+                     o
+                     --->git push --force heroku master 
+7. Al ver heroku en el navegador, en la opción overview, puedes ver tu correo con el mensaje build succeeded
+
